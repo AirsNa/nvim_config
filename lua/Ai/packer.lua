@@ -7,7 +7,7 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
-	use {
+use {
 		'nvim-telescope/telescope.nvim', tag = '0.1.1',
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
@@ -67,6 +67,13 @@ return require('packer').startup(function(use)
 		require('orgmode').setup_ts_grammar()
 	end
 }
+
+	--trouble plugin
+	use
+	{
+		"folke/trouble.nvim"
+	}
 --	use ('mg979/vim-visual-multi')
+
 end
 )
