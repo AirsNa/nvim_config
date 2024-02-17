@@ -1,5 +1,17 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<F2>", vim.cmd.Ex)
+
+-- function that open ToggleExplorer
+-- source https://www.reddit.com/r/neovim/comments/z86ife/check_if_explore_is_open/?sort=old
+
+local function toggleexplorer()
+    if vim.api.nvim_buf_get_option(0, 'filetype') == 'netrw' then
+        vim.api.nvim_exec('Rexplore', false)
+    else
+        vim.api.nvim_exec(':Explore', false)
+    end
+end
+
+vim.keymap.set('n', '<F2>', toggleexplorer)
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

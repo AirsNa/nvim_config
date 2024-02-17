@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
 	}
 
 	use { "catppuccin/nvim", as = "catppuccin" }
+	use {"folke/tokyonight.nvim", as = "tokyonight"}
 
 	use ("nvim-treesitter/nvim-treesitter", {run = ':TSUpdate'})
 
@@ -24,7 +25,9 @@ return require('packer').startup(function(use)
 	use ("tpope/vim-fugitive")
 
 	use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-	require("toggleterm").setup()
+	require("toggleterm").setup(
+	{
+	})
 	end}
 
 	use{"gpanders/vim-man"}

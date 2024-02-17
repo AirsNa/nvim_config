@@ -4,9 +4,10 @@ if not status_ok then
 end
 
 toggleterm.setup({
+	open_mapping = [[<c-p>]],
 	hide_numbers = false,
 	start_in_insert = true,
 	close_on_exit = true,
 })
-vim.keymap.set("n", "<C-p>", vim.cmd.ToggleTerm)
+-- vim.keymap.set("n", "<C-p>", vim.cmd.ToggleTerm)
 
