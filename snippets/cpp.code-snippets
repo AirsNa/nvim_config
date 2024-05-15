@@ -1,4 +1,17 @@
 {
+	"function Description": {
+        "prefix": "func-Desc",
+        "body": [
+            "/*",
+			" * @Description : ${1:Description.}",
+			" * @param ${2:name} ${3:Type and description of the parameter.}",
+			" * ",
+			" * @return ${4:Type and description of the returned value.}",
+            " *",
+            " */"
+        ],
+        "description": "A simple C++ comment block for classes, including short summary, and details. Useful when you prefer to add the other documentation tags manually."
+    },
 	"hppclass": {
 		"prefix": "hpp class",
 			"body": [
