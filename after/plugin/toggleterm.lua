@@ -8,7 +8,7 @@ toggleterm.setup({
 	hide_numbers = false,
 	start_in_insert = true,
 	close_on_exit = true,
-	shell = "/usr/bin/fish"
+	shell = "/usr/bin/bash"
 })
 -- vim.keymap.set("n", "<C-p>", vim.cmd.ToggleTerm)
 

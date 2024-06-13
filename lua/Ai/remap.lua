@@ -75,6 +75,8 @@ vim.keymap.set("t", "<Esc>", "<C-\\><C-n>");
 --for 42 header
 vim.keymap.set("n", "<F3>", vim.cmd.Stdheader);
 
+--cycles between two buffers
+vim.keymap.set({"n", "v", "x", "c", "s", "o"}, "<leader>b", vim.cmd.bnext);
 
 vim.keymap.set("n", "<leader><leader>", function()
 	vim.cmd("so")

@@ -17,6 +17,9 @@ return require('packer').startup(function(use)
 	use {"folke/tokyonight.nvim", as = "tokyonight"}
 
 	use ("nvim-treesitter/nvim-treesitter", {run = ':TSUpdate'})
+	use { 'romgrk/nvim-treesitter-context', config = function()
+      require'treesitter-context'.setup{}
+    end }
 
 	use ("theprimeagen/harpoon")
 
