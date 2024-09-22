@@ -3,7 +3,7 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
-return require('packer').startup(function(use)
+return require('packer').startup(function()
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
 
@@ -28,12 +28,13 @@ return require('packer').startup(function(use)
 	use ("tpope/vim-fugitive")
 
 	use {"akinsho/toggleterm.nvim", tag = '*', config = function()
-	require("toggleterm").setup(
-	{
-	})
-	end}
+		require("toggleterm").setup()
+		end
+	}
 
 	use{"gpanders/vim-man"}
+
+    use {"stevearc/aerial.nvim"}
 
 	--LSP
 	use {

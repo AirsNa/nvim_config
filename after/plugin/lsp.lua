@@ -3,7 +3,6 @@ local lsp = require("lsp-zero")
 lsp.preset("recommended")
 
 lsp.ensure_installed({
-	'tsserver',
 	'clangd',
 })
 
@@ -42,6 +41,15 @@ lsp.set_preferences({
 		info = 'I'
 	}
 })
+
+-- lsp.start_client({
+--   name = 'py-lsp',
+--   cmd = {'pylsp --ws'},
+--   filetypes = {'python'},
+--   -- root_dir = vim.fs.dirname(vim.fs.find({'pyproject.toml', 'setup.py'}, { upward = true })[1]),
+-- })
+
+
 
 lsp.on_attach(function(client, bufnr)
 	local opts = {buffer = bufnr, remap = false}
